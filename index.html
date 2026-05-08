@@ -4,108 +4,359 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diego Alonso Rotta Valverde | Critical International Migration Law – University of Kent</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background-color:#ffffff;min-height:100vh;padding:40px 20px;}
-.logo-wrap{text-align:center;margin-bottom:28px;}
-.logo-wrap img{width:190px;height:auto;}
-.container{max-width:960px;margin:0 auto;background:#fff;border-radius:4px;border-top:6px solid #05345C;box-shadow:0 4px 24px rgba(5,52,92,0.13);padding:40px;}
-.page-org{text-align:center;color:#05345C;font-size:0.9em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:6px;}
-.page-title{color:#1a1a1a;text-align:center;margin-bottom:8px;font-size:1.9em;font-weight:700;}
-.page-subtitle{text-align:center;color:#555;font-size:0.93em;margin-bottom:10px;}
-.divider{width:60px;height:3px;background:#937227;margin:16px auto 32px;border-radius:2px;}
+  *{margin:0;padding:0;box-sizing:border-box;}
 
-/* Featured card – principal */
-.card-featured{background:#fff;border:1px solid #C2CEDB;border-top:5px solid #05345C;border-radius:4px;padding:28px 26px 24px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;margin-bottom:28px;transition:box-shadow 0.2s,transform 0.2s;}
-.card-featured:hover{box-shadow:0 8px 28px rgba(5,52,92,0.18);transform:translateY(-4px);}
-.card-featured .label{font-size:0.72em;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#937227;margin-bottom:10px;}
-.card-featured h2{font-size:1.3em;font-weight:700;color:#05345C;margin-bottom:8px;line-height:1.4;}
-.card-featured .org{font-size:0.86em;color:#555;margin-bottom:6px;}
-.card-featured .date{font-size:0.79em;color:#888;margin-bottom:18px;}
+  :root{
+    --kent-blue: #05345C;
+    --kent-blue-dark: #032240;
+    --kent-blue-light: #0a4a7a;
+    --kent-gold: #937227;
+    --kent-gold-light: #b08d3a;
+    --bg: #F2F4F7;
+    --surface: #FFFFFF;
+    --border: #C2CEDB;
+    --text-primary: #1a1a1a;
+    --text-secondary: #444;
+    --text-muted: #888;
+  }
 
-/* Stack vertical */
-.stack{display:flex;flex-direction:column;gap:18px;}
-.card{background:#fff;border:1px solid #C2CEDB;border-top:4px solid #05345C;border-radius:4px;padding:24px 22px 20px;text-decoration:none;display:flex;flex-direction:column;justify-content:space-between;min-height:210px;transition:box-shadow 0.2s,transform 0.2s;}
-.card:hover{box-shadow:0 8px 28px rgba(5,52,92,0.18);transform:translateY(-4px);}
-.badge{display:inline-block;background:#EEF1F5;color:#05345C;font-size:0.72em;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:3px 10px;border-radius:2px;margin-bottom:12px;}
-.card h2{font-size:1.05em;font-weight:700;color:#1a1a1a;margin-bottom:8px;line-height:1.4;}
-.card .org{font-size:0.84em;color:#555;margin-bottom:10px;flex-grow:1;}
-.card .date{font-size:0.79em;color:#888;margin-bottom:16px;}
+  body{
+    font-family:'Source Sans 3',sans-serif;
+    background-color: var(--bg);
+    min-height:100vh;
+    padding:48px 20px;
+    background-image: radial-gradient(ellipse at 20% 10%, rgba(5,52,92,0.06) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 90%, rgba(147,114,39,0.06) 0%, transparent 60%);
+  }
 
-.btn{background:#05345C;color:#fff;padding:10px 18px;border-radius:3px;text-decoration:none;text-align:center;font-size:0.84em;font-weight:600;display:inline-block;transition:background 0.2s;}
-.btn:hover{background:#032240;}
-.btn-gold{background:#937227;}
-.btn-gold:hover{background:#7a5e1f;}
+  .page-wrap{
+    max-width: 860px;
+    margin: 0 auto;
+  }
 
-.section-label{font-size:0.78em;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#937227;margin-bottom:14px;}
-.repo-desc{text-align:justify;margin-top:32px;margin-bottom:12px;font-size:0.82em;color:#555;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.6;}
-.footer{text-align:center;margin-top:8px;font-size:0.76em;color:#aaa;}
+  /* ── Header ── */
+  .header{
+    text-align:center;
+    margin-bottom: 48px;
+  }
+
+  .logo-wrap{
+    display:inline-block;
+    margin-bottom: 24px;
+  }
+
+  .logo-wrap img{
+    width:200px;
+    height:auto;
+  }
+
+  .header-label{
+    font-size: 0.72em;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--kent-blue);
+    margin-bottom: 10px;
+  }
+
+  .header-name{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .header-program{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1em;
+    font-weight: 400;
+    color: var(--kent-blue);
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .header-sub{
+    font-size: 0.82em;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  .ornament{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 12px;
+    margin: 24px auto;
+  }
+
+  .ornament-line{
+    height:1px;
+    width:80px;
+    background: linear-gradient(to right, transparent, var(--kent-gold));
+  }
+
+  .ornament-line.right{
+    background: linear-gradient(to left, transparent, var(--kent-gold));
+  }
+
+  .ornament-diamond{
+    width:8px;
+    height:8px;
+    background: var(--kent-gold);
+    transform: rotate(45deg);
+  }
+
+  /* ── Section label ── */
+  .section-label{
+    font-size:0.7em;
+    font-weight:600;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color: var(--kent-gold);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+
+  .section-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background: linear-gradient(to right, var(--border), transparent);
+  }
+
+  /* ── Cards ── */
+  .cards{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    margin-bottom: 40px;
+  }
+
+  .card{
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 32px 30px 26px;
+    text-decoration:none;
+    display:flex;
+    align-items:flex-start;
+    gap: 24px;
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .card::before{
+    content:'';
+    position:absolute;
+    left:0; top:0; bottom:0;
+    width:4px;
+    background: var(--kent-blue);
+    border-radius: 6px 0 0 6px;
+    transition: width 0.25s;
+  }
+
+  .card:hover{
+    box-shadow: 0 10px 36px rgba(5,52,92,0.14);
+    transform: translateY(-3px);
+    border-color: var(--kent-blue);
+  }
+
+  .card:hover::before{
+    width:6px;
+  }
+
+  .card-number{
+    flex-shrink:0;
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    background: var(--kent-blue);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Playfair Display',serif;
+    font-size:1.3em;
+    font-weight:700;
+    margin-top:2px;
+  }
+
+  .card-number.featured{
+    background: var(--kent-gold);
+    font-size:1.5em;
+  }
+
+  .card-body{
+    flex:1;
+  }
+
+  .card-badge{
+    display:inline-block;
+    font-size:0.68em;
+    font-weight:600;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color: var(--kent-blue);
+    background: rgba(5,52,92,0.07);
+    padding:3px 10px;
+    border-radius:2px;
+    margin-bottom:10px;
+  }
+
+  .card-badge.gold{
+    color: var(--kent-gold);
+    background: rgba(147,114,39,0.09);
+  }
+
+  .card-title{
+    font-family:'Playfair Display',serif;
+    font-size:1.18em;
+    font-weight:700;
+    color: var(--text-primary);
+    margin-bottom:8px;
+    line-height:1.35;
+  }
+
+  .card-code{
+    font-size:0.82em;
+    color: var(--text-secondary);
+    margin-bottom:4px;
+  }
+
+  .card-date{
+    font-size:0.77em;
+    color: var(--text-muted);
+    margin-bottom:16px;
+  }
+
+  .btn{
+    display:inline-block;
+    background: var(--kent-blue);
+    color:#fff;
+    padding:9px 20px;
+    border-radius:3px;
+    font-size:0.8em;
+    font-weight:600;
+    text-decoration:none;
+    letter-spacing:0.04em;
+    transition:background 0.2s;
+  }
+
+  .btn:hover{background: var(--kent-blue-dark);}
+
+  .btn.gold{background: var(--kent-gold);}
+  .btn.gold:hover{background: var(--kent-gold-light);}
+
+  /* ── Footer ── */
+  .repo-note{
+    text-align:justify;
+    font-size:0.82em;
+    color: var(--text-muted);
+    line-height:1.6;
+    max-width:700px;
+    margin:32px auto 12px;
+  }
+
+  .footer{
+    text-align:center;
+    font-size:0.76em;
+    color: var(--text-muted);
+    margin-top:8px;
+  }
+
+  @media(max-width:580px){
+    .card{flex-direction:column;gap:16px;}
+    .card-number{width:42px;height:42px;font-size:1.1em;}
+    .header-name{font-size:1.6em;}
+  }
 </style>
 </head>
 <body>
 
-<div class="logo-wrap">
-  <img src="https://raw.githubusercontent.com/rotvaldi/certificateskent/main/University_of_Kent_logo.svg" alt="University of Kent Logo" />
-</div>
+<div class="page-wrap">
 
-<div class="container">
-  <p class="page-org">University of Kent</p>
-  <h1 class="page-title">Diego Alonso Rotta Valverde</h1>
-  <p class="page-subtitle" style="font-size:1.1em;font-weight:700;color:#1a1a1a;">Critical International Migration Law</p>
-  <p class="page-subtitle">Certificates of Achievement Repository</p>
-  <div class="divider"></div>
-
-  <!-- FEATURED CERTIFICATE -->
-  <p class="section-label">&#9733; Principal ExpertTrack Certificate</p>
-  <a href="https://rotvaldi.github.io/certificateskent/Certificate%20awarded%20by%20the%20University%20of%20Kent%20in%20Critical%20International%20Migration%20Law.pdf" class="card-featured" target="_blank">
-    <div>
-      <p class="label">University of Kent &middot; March 2026</p>
-      <h2>Critical International Migration Law</h2>
-      <p class="org">University of Kent</p>
-      <p class="date">Digital certificate &middot; March 2026</p>
+  <!-- Header -->
+  <div class="header">
+    <div class="logo-wrap">
+      <img src="https://raw.githubusercontent.com/rotvaldi/certificateskent/main/University_of_Kent_logo.svg" alt="University of Kent" />
     </div>
-    <span class="btn btn-gold">View certificate &rarr;</span>
-  </a>
+    <p class="header-label">University of Kent</p>
+    <h1 class="header-name">Diego Alonso Rotta Valverde</h1>
+    <p class="header-program">Critical International Migration Law</p>
+    <p class="header-sub">Certificates of Achievement Repository</p>
+    <div class="ornament">
+      <div class="ornament-line"></div>
+      <div class="ornament-diamond"></div>
+      <div class="ornament-line right"></div>
+    </div>
+  </div>
 
-  <!-- MODULE CERTIFICATES -->
+  <!-- Featured Certificate -->
+  <p class="section-label">&#9733; Principal ExpertTrack Certificate</p>
+  <div class="cards">
+    <a href="https://rotvaldi.github.io/certificateskent/Certificate%20awarded%20by%20the%20University%20of%20Kent%20in%20Critical%20International%20Migration%20Law.pdf" class="card" target="_blank">
+      <div class="card-number featured">&#9733;</div>
+      <div class="card-body">
+        <span class="card-badge gold">University of Kent &middot; March 2026</span>
+        <h2 class="card-title">Critical International Migration Law</h2>
+        <p class="card-code">ExpertTrack Certificate &middot; University of Kent</p>
+        <p class="card-date">Digital certificate &middot; March 2026</p>
+        <span class="btn gold">View certificate &rarr;</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Module Certificates -->
   <p class="section-label">Module Certificates &middot; March 2026</p>
-  <div class="stack">
+  <div class="cards">
 
     <a href="https://rotvaldi.github.io/certificateskent/Certificate%20awarded%20by%20the%20University%20of%20Kent%20in%20Law%20and%20the%20Framing%20of%20Migrants%20and%20Migration.pdf" class="card" target="_blank">
-      <div>
-        <span class="badge">University of Kent &middot; March 2026</span>
-        <h2>Law and the Framing of Migrants and Migration</h2>
-        <p class="org">University of Kent</p>
-        <p class="date">Digital certificate &middot; March 2026</p>
+      <div class="card-number">I</div>
+      <div class="card-body">
+        <span class="card-badge">University of Kent &middot; March 2026</span>
+        <h2 class="card-title">Law and the Framing of Migrants and Migration</h2>
+        <p class="card-code">Module Certificate &middot; University of Kent</p>
+        <p class="card-date">Digital certificate &middot; March 2026</p>
+        <span class="btn">View certificate &rarr;</span>
       </div>
-      <span class="btn">View certificate &rarr;</span>
     </a>
 
     <a href="https://rotvaldi.github.io/certificateskent/Certificate%20awarded%20by%20the%20University%20of%20Kent%20in%20Freedom%20of%20Movement%2C%20Refugees%2C%20Traffickers%2C%20and%20Smugglers.pdf" class="card" target="_blank">
-      <div>
-        <span class="badge">University of Kent &middot; March 2026</span>
-        <h2>Freedom of Movement, Refugees, Traffickers, and Smugglers</h2>
-        <p class="org">University of Kent</p>
-        <p class="date">Digital certificate &middot; March 2026</p>
+      <div class="card-number">II</div>
+      <div class="card-body">
+        <span class="card-badge">University of Kent &middot; March 2026</span>
+        <h2 class="card-title">Freedom of Movement, Refugees, Traffickers, and Smugglers</h2>
+        <p class="card-code">Module Certificate &middot; University of Kent</p>
+        <p class="card-date">Digital certificate &middot; March 2026</p>
+        <span class="btn">View certificate &rarr;</span>
       </div>
-      <span class="btn">View certificate &rarr;</span>
     </a>
 
     <a href="https://rotvaldi.github.io/certificateskent/Certificate%20awarded%20by%20the%20University%20of%20Kent%20in%20Law's%20Absence%20and%20Law's%20Failings.pdf" class="card" target="_blank">
-      <div>
-        <span class="badge">University of Kent &middot; March 2026</span>
-        <h2>Law's Absence and Law's Failings</h2>
-        <p class="org">University of Kent</p>
-        <p class="date">Digital certificate &middot; March 2026</p>
+      <div class="card-number">III</div>
+      <div class="card-body">
+        <span class="card-badge">University of Kent &middot; March 2026</span>
+        <h2 class="card-title">Law's Absence and Law's Failings</h2>
+        <p class="card-code">Module Certificate &middot; University of Kent</p>
+        <p class="card-date">Digital certificate &middot; March 2026</p>
+        <span class="btn">View certificate &rarr;</span>
       </div>
-      <span class="btn">View certificate &rarr;</span>
     </a>
 
   </div>
-  <p class="repo-desc">This repository provides a transparent and accessible record of professional certificates obtained through recognized training programs and institutions. It is intended to facilitate the verification of credentials by third parties. All certificates remain the responsibility of their respective issuing institutions.</p>
+
+  <!-- Note -->
+  <p class="repo-note">This repository provides a transparent and accessible record of professional certificates obtained through recognized training programs and institutions. It is intended to facilitate the verification of credentials by third parties. All certificates remain the responsibility of their respective issuing institutions.</p>
+
   <p class="footer">&copy; 2026 &middot; Diego Alonso Rotta Valverde &middot; Certificates issued by the University of Kent</p>
+
 </div>
 </body>
 </html>
-
-
